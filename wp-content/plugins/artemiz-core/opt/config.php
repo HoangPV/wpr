@@ -133,7 +133,6 @@
         )
     );
 
-
     
     Redux::setArgs( $opt_name, $args );
 
