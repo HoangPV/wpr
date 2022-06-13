@@ -214,7 +214,8 @@ $echoHTML .= '</div>';
 
 ?>
 
-<?php echo wp_kses_post( $echoHTML ); ?>
+<?php //echo wp_kses_post( $echoHTML ); ?>
+<?php echo $echoHTML; ?>
 
 
 <!-- SEARCH POPUP -->
