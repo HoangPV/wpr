@@ -3821,7 +3821,7 @@ ul.artemiz_fn_postlist .read_holder p a:hover span{
 	flex: 0 0 auto;
 }
 .artemiz_fn_one_line .fn_logo img{
-	max-width: 300px;
+	/*max-width: 150px;*/
 	max-height: 100px;
 }
 .artemiz_fn_one_line .one_line_in{
