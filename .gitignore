@@ -1,6 +1,6 @@
 /.idea/*
 /wp-config.php
-/wp-content/themes/pposhipping/
+#/wp-content/themes/pposhipping/
 license.txt
 readme.html
 wp-activate.php
