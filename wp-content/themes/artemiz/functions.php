@@ -508,6 +508,84 @@ function artemiz_fn_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Open Tonnages.
+	 */
+
+	$labels = [
+		"name" => __( "Open Tonnages", "artemiz-child" ),
+		"singular_name" => __( "Open Tonnage", "artemiz-child" ),
+	];
+
+	$args = [
+		"label" => __( "Open Tonnages", "artemiz-child" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "open_tonnage", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "open_tonnage", $args );
+
+	/**
+	 * Post Type: Cargo Offers.
+	 */
+
+	$labels = [
+		"name" => __( "Cargo Offers", "artemiz-child" ),
+		"singular_name" => __( "Cargo Offer", "artemiz-child" ),
+	];
+
+	$args = [
+		"label" => __( "Cargo Offers", "artemiz-child" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "cargo_offer", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "cargo_offer", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
 
 
 ?>
